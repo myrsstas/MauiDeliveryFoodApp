@@ -14,4 +14,13 @@ public partial class MainMenuTabbedPage : ContentPage
         InitializeComponent();
         
     }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        if (BindingContext is MainMenuTabbedPageViewModel viewModel)
+        {
+            viewModel.ClearLabels();
+        }
+    }
 }

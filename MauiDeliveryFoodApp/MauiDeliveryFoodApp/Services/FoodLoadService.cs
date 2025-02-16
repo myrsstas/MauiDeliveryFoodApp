@@ -7,7 +7,7 @@ namespace MauiDeliveryFoodApp.Services;
 
 public class FoodLoadService
 {
-    private string _jsonFilePath = "MauiDeliveryFoodApp.Resources.Raw.AvailableFoods.json";
+    private readonly string _jsonFilePath = "MauiDeliveryFoodApp.Resources.Data.foodMenu.json";
 
     public ObservableCollection<FoodModel> GetMenuItems()
     {

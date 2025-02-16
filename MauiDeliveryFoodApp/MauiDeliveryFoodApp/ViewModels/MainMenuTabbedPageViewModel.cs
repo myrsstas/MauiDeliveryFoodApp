@@ -40,4 +40,13 @@ public class MainMenuTabbedPageViewModel : BaseViewModel
             Image = foodModel.Image
         };
     }
+
+    public void ClearLabels()
+    {
+        foreach (var item in MenuItemViewModelList)
+        {
+            item.ClearStatus();
+        }
+    }
+    
 }

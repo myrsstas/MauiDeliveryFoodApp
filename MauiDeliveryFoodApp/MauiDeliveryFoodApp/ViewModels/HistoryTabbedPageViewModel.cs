@@ -37,7 +37,7 @@ public class HistoryTabbedPageViewModel : BaseViewModel
         set => SetField(ref _lastOrderDescription, value);
     }
 
-    public FoodModel foodModel { get; set; }
+    public FoodModel foodModel { get; set; } = new FoodModel();
     
     public ObservableCollection<FoodModel> lastFood { get; set; } = new ObservableCollection<FoodModel>();
 
@@ -48,7 +48,7 @@ public class HistoryTabbedPageViewModel : BaseViewModel
             LastOrderName = "No Previous Order";
             LastOrderImage = null;
             LastOrderDescription = null;
-            
+            return;
         }
         foodModel = _lastMealService.ReadLastMeal();
 
@@ -64,7 +64,6 @@ public class HistoryTabbedPageViewModel : BaseViewModel
     
     public override void Initialize()
     {
-        
         LoadLastFoodOrdered();
     }
 

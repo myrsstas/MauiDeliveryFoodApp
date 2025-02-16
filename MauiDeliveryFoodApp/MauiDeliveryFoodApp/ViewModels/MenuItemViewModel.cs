@@ -123,7 +123,6 @@ public class MenuItemViewModel : BaseViewModel
 
     private void UpdateOrderStatus(Task<bool> task)
     {
-        System.Diagnostics.Debug.WriteLine(task.Result);
         if (!task.Result)
         {
             CancelButtonVisibility = false;
@@ -140,7 +139,6 @@ public class MenuItemViewModel : BaseViewModel
 
     private void CancelButtonTappedCommand()
     {
-        System.Diagnostics.Debug.WriteLine("Cancel Command Executed, Hellooooo!");
         _mealPreparationService.CancelMealPreparation(Name, LatestOrderID);
     }
     
@@ -154,6 +152,15 @@ public class MenuItemViewModel : BaseViewModel
         OrderButtonVisibility = true;
         CancelButtonVisibility = false;
         ProcessLabelVisibility = false;
+    }
+    
+    public void ClearStatus()
+    {
+        if (CancelButtonVisibility)
+        {
+            return;
+        }
+        ProcessLabelText = "";
     }
     
 }
