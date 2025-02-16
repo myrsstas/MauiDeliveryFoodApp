@@ -2,8 +2,35 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiDeliveryFoodApp.Views.HistoryTabbedPage">
+             x:Class="MauiDeliveryFoodApp.Views.HistoryTabbedPage"
+             x:Name="HistoryPage"
+             Title="History">
     <ContentPage.Content>
-        
+        <VerticalStackLayout
+            Margin="30">
+
+            <StackLayout>
+                <Label Text="Last Order" HorizontalTextAlignment="Center"
+                       Margin="10" />
+            </StackLayout>
+
+            <Border
+                WidthRequest="400"
+                HeightRequest="200"
+                Stroke="Blue"
+                StrokeThickness="2"
+                BackgroundColor="Grey"
+                StrokeShape="RoundRectangle 20">
+
+                <StackLayout>
+                    <Image Source="{Binding LastOrderImage}"
+                           HeightRequest="100"
+                           WidthRequest="200" />
+                    <Label Text="{Binding LastOrderName}" HorizontalTextAlignment="Center" />
+                    <Label Text="{Binding LastOrderDescription}" HorizontalTextAlignment="Center" />
+                </StackLayout>
+
+            </Border>
+        </VerticalStackLayout>
     </ContentPage.Content>
 </ContentPage>

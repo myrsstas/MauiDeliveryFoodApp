@@ -75,12 +75,7 @@ public class MenuItemViewModel : BaseViewModel
         get => _cancelCommand;
         set => SetField(ref _cancelCommand, value);
     }
-
-    public ICommand OrderReadyCommand
-    {
-        get => _orderReadyCommand;
-        set => SetField(ref _orderReadyCommand, value);
-    }
+    
 
     public bool CancelButtonVisibility
     {
@@ -119,7 +114,7 @@ public class MenuItemViewModel : BaseViewModel
     {
         CancelButtonVisibility = true;
         OrderButtonVisibility = false;
-        ProcessLabelText = $"Preparing for {Name}";
+        ProcessLabelText = $"We are Preparing {Name} for you";
         ProcessLabelVisibility = true;
         LatestOrderID = _mealPreparationService.NextOrderId;
         _mealPreparationService.PrepareFood(Name, LatestOrderID).ContinueWith(UpdateOrderStatus);

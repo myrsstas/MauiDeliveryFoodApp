@@ -12,6 +12,6 @@ public partial class MainMenuTabbedPage : ContentPage
     public MainMenuTabbedPage()
     {
         InitializeComponent();
-        BindingContext = new MainMenuTabbedPageViewModel();
+        
     }
 }
