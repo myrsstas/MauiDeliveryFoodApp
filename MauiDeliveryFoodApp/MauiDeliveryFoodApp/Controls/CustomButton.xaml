@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Border xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        StrokeShape="RoundRectangle 15"
+        StrokeThickness="2"
+        Stroke="Black"
+        x:Name="RootButton"
+        x:Class="MauiDeliveryFoodApp.Controls.CustomButton">
+
+
+    <Border.GestureRecognizers>
+        <TapGestureRecognizer Command="{Binding TappedCommand, Source={x:Reference RootButton}}" />
+    </Border.GestureRecognizers>
+
+    <Label
+        Text="{Binding Title, Source={x:Reference RootButton}}"
+        HorizontalOptions="Fill"
+        VerticalOptions="Fill"
+        HorizontalTextAlignment="Center"
+        VerticalTextAlignment="Center" />
+    
+</Border>

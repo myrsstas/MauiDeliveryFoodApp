@@ -1,0 +1,57 @@
+﻿[
+  {
+    "Name": "French Fries",
+    "Description": "Fried golden potato sticks.",
+    "Image": "french_fries.jpg"
+  },
+  {
+    "Name": "Cheese Balls",
+    "Description": "Fried cheesy bites",
+    "Image": "cheese_balls.jpg"
+  },
+  {
+    "Name": "Greek Salad",
+    "Description": "Feta, olives, and fresh veggies",
+    "Image": "greek_salad.jpg"
+  },
+  {
+    "Name": "Caesar Salad",
+    "Description": "Lettuce, chicken, croutons, and Caesar dressing",
+    "Image": "ceasar_salad.jpg"
+  },
+  {
+    "Name": "Cheeseburger",
+    "Description": "Beef, cheese, and toppings in between a bun",
+    "Image": "cheeseburger.jpg"
+  },
+  {
+    "Name": "BBQ Burger",
+    "Description": "Beef burger with smoky BBQ sauce",
+    "Image": "bbq_burger.jpg"
+  },
+  {
+    "Name": "Margherita Pizza",
+    "Description": "Classic pizza with tomato and mozzarella",
+    "Image": "pizza_margherita.jpg"
+  },
+  {
+    "Name": "Pasta Bolognese",
+    "Description": "Pasta with minched meat sauce",
+    "Image": "pasta_bolognese.jpg"
+  },
+  {
+    "Name": "Schnitzel a la Creme",
+    "Description": "Breaded pork with creamy sauce",
+    "Image": "schnitzel_a_la_creme.jpg"
+  },
+  {
+    "Name": "Pork Skewers",
+    "Description": "Grilled marinated pork pieces on a stick",
+    "Image": "pork_skewers.jpg"
+  },
+  {
+    "Name": "Chicken Skewers",
+    "Description": "Grilled chicken pieces on a stick",
+    "Image": "chicken_skewers.jpg"
+  }
+]
