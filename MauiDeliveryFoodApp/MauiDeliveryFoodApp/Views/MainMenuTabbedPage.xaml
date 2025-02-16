@@ -2,8 +2,77 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiDeliveryFoodApp.Views.MainMenuTabbedPage">
-    <ContentPage.Content>
-        
-    </ContentPage.Content>
+             xmlns:viewModels="clr-namespace:MauiDeliveryFoodApp.ViewModels"
+             xmlns:controls="clr-namespace:MauiDeliveryFoodApp.Controls"
+             x:Class="MauiDeliveryFoodApp.Views.MainMenuTabbedPage"
+             x:Name="MainMenu"
+             Title="Main Menu">
+
+    <ContentPage.BindingContext>
+        <viewModels:MainMenuTabbedPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <CollectionView Margin="20, 40, 30, 40"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    ItemsSource="{Binding MenuItemViewModelList}"
+                    ItemSizingStrategy="MeasureFirstItem"
+                    SelectionMode="None">
+
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
+        </CollectionView.ItemsLayout>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+
+                <Grid Padding="10"
+                      BackgroundColor="Bisque">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100*" />
+                        <RowDefinition Height="20" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="{Binding Image}"
+                           HeightRequest="80"
+                           Aspect="Fill" Grid.Column="0" Grid.Row="0" />
+
+                    <VerticalStackLayout Grid.Column="1" Grid.Row="0" Padding="5" Margin="5">
+                        <Label Text="{Binding Name}" FontAttributes="Bold" TextColor="Brown" />
+                        <Label Text="{Binding Description}" FontAttributes="Italic" />
+                    </VerticalStackLayout>
+
+                    <controls:CustomButton
+                        HeightRequest="50"
+                        Title="{Binding Path=OrderButtonLabel}"
+                        TappedCommand="{Binding ButtonTappedCommand}"
+                        IsVisible="{Binding OrderButtonVisibility}"
+                        Grid.Column="2" Grid.Row="0" />
+
+                    <controls:CustomButton
+                        BackgroundColor="Red"
+                        Title="{Binding Path=CancelButtonLabel}"
+                        TappedCommand="{Binding CancelButtonCommand}"
+                        IsVisible="{Binding CancelButtonVisibility}"
+                        Grid.Column="2" Grid.Row="0" />
+
+                    <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
+                           Text="{Binding ProcessLabelText}"
+                           IsVisible="{Binding ProcessLabelVisibility}" />
+
+                </Grid>
+
+            </DataTemplate>
+
+        </CollectionView.ItemTemplate>
+
+    </CollectionView>
+
 </ContentPage>
