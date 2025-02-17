@@ -4,7 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiDeliveryFoodApp.Views.HistoryTabbedPage"
              x:Name="HistoryPage"
-             BackgroundColor="#FFB347"
+             BackgroundColor="#FFDAB9"
              Title="History">
     <ContentPage.Content>
         <VerticalStackLayout
@@ -26,14 +26,14 @@
                 HeightRequest="340"
                 Stroke="Black"
                 StrokeThickness="2"
-                BackgroundColor="#FFD100"
+                BackgroundColor="#FFFDD0"
                 StrokeShape="RoundRectangle 20">
 
                 <StackLayout 
                     Padding="20"
                     Margin="10">
                     
-                    <Border Stroke="#FFD100"
+                    <Border Stroke="#FFFDD0"
                             HeightRequest="180"
                             WidthRequest="180"
                             StrokeThickness="2"

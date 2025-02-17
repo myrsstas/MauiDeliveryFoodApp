@@ -6,7 +6,7 @@
              xmlns:controls="clr-namespace:MauiDeliveryFoodApp.Controls"
              x:Class="MauiDeliveryFoodApp.Views.MainMenuTabbedPage"
              x:Name="MainMenu"
-             BackgroundColor="#FFB347"
+             BackgroundColor="#FFDAB9"
              Title="Main Menu">
 
     <ContentPage.BindingContext>
@@ -39,7 +39,7 @@
                             StrokeShape="RoundRectangle 20">
 
                         <Grid Padding="5"
-                              BackgroundColor="#FFD100">
+                              BackgroundColor="#fffdd0">
 
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="100*" />
@@ -54,7 +54,7 @@
 
                             <Border
                                 StrokeThickness="2"
-                                Stroke="#FFD100"
+                                Stroke="#FFFDD0"
                                 Margin="5"
                                 StrokeShape="RoundRectangle 20" Grid.Column="0" Grid.Row="0">
 
