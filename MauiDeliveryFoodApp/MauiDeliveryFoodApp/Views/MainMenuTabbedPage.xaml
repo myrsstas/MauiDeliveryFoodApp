@@ -77,8 +77,6 @@
                             </VerticalStackLayout>
 
                             <controls:CustomButton
-                                HeightRequest="80"
-                                WidthRequest="80"
                                 Title="{Binding Path=OrderButtonLabel}"
                                 TappedCommand="{Binding ButtonTappedCommand}"
                                 IsVisible="{Binding OrderButtonVisibility}"
@@ -86,8 +84,6 @@
 
                             <controls:CustomButton
                                 BackgroundColor="OrangeRed"
-                                WidthRequest="80"
-                                HeightRequest="80"
                                 Title="{Binding Path=CancelButtonLabel}"
                                 TappedCommand="{Binding CancelButtonCommand}"
                                 IsVisible="{Binding CancelButtonVisibility}"
