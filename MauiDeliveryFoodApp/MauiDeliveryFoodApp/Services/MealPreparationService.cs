@@ -15,13 +15,11 @@ public class MealPreparationService
 
         try
         {
-            System.Diagnostics.Debug.WriteLine($"I am getting there for food {foodName} with order {NextOrderId}");
             await PrepareFoodAsync(cts.Token);
             return true;
         }
         catch (OperationCanceledException exception)
         {
-            System.Diagnostics.Debug.WriteLine("caught you");
             return false;
         }
     }
@@ -37,6 +35,7 @@ public class MealPreparationService
                 {
                     ctsToken.ThrowIfCancellationRequested();
                 }
+
                 Thread.Sleep(1000);
             }
         }, ctsToken);
@@ -50,8 +49,6 @@ public class MealPreparationService
             cancellationTokenSource.Cancel();
             _mealsGettingPrepared.Remove(orderId);
         }
-
-        System.Diagnostics.Debug.WriteLine($"i got cancelled for food {foodName}");
     }
 
     private void UpdateNextOrderId()

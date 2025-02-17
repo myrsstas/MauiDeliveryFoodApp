@@ -9,7 +9,6 @@ public class HistoryTabbedPageViewModel : BaseViewModel
     private string _lastOrderName;
     private string _lastOrderImage;
     private string _lastOrderDescription;
-    
     private FoodModel _foodModel;
     private LastMealService _lastMealService;
 
@@ -37,9 +36,9 @@ public class HistoryTabbedPageViewModel : BaseViewModel
         set => SetField(ref _lastOrderDescription, value);
     }
 
-    public FoodModel foodModel { get; set; } = new FoodModel();
+    public FoodModel FoodModel { get; set; } = new FoodModel();
     
-    public ObservableCollection<FoodModel> lastFood { get; set; } = new ObservableCollection<FoodModel>();
+    public ObservableCollection<FoodModel> LastFood { get; set; } = new ObservableCollection<FoodModel>();
 
     private void LoadLastFoodOrdered()
     {
@@ -50,14 +49,14 @@ public class HistoryTabbedPageViewModel : BaseViewModel
             LastOrderDescription = null;
             return;
         }
-        foodModel = _lastMealService.ReadLastMeal();
+        FoodModel = _lastMealService.ReadLastMeal();
 
-        if (foodModel != null)
+        if (FoodModel != null)
         {
-            lastFood.Add(foodModel);
-            LastOrderName = lastFood.Last().Name;
-            LastOrderImage = lastFood.Last().Image;
-            LastOrderDescription = lastFood.Last().Description;
+            LastFood.Add(FoodModel);
+            LastOrderName = LastFood.Last().Name;
+            LastOrderImage = LastFood.Last().Image;
+            LastOrderDescription = LastFood.Last().Description;
         }
         
     }

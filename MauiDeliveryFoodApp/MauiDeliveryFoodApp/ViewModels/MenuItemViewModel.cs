@@ -144,8 +144,8 @@ public class MenuItemViewModel : BaseViewModel
     
     public override void Initialize()
     {
-        OrderButtonLabel = "Button Here";
-        CancelButtonLabel = "Cancel Here";
+        OrderButtonLabel = "Order";
+        CancelButtonLabel = "Cancel Order";
         LatestOrderID = -1;
         ButtonTappedCommand = new Command(ExecuteButtonTappedCommand);
         CancelButtonCommand = new Command(CancelButtonTappedCommand);
