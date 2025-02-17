@@ -14,7 +14,6 @@ public class MenuItemViewModel : BaseViewModel
     private FoodModel _foodModel;
     private ICommand _orderButtonCommand;
     private ICommand _cancelCommand;
-    private ICommand _orderReadyCommand;
     private bool _cancelButtonVisibility;
     private bool _orderButtonVisibility;
     private string _processLabelText;

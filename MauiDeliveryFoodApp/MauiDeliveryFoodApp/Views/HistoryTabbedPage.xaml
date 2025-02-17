@@ -4,30 +4,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiDeliveryFoodApp.Views.HistoryTabbedPage"
              x:Name="HistoryPage"
+             BackgroundColor="#FFB347"
              Title="History">
     <ContentPage.Content>
         <VerticalStackLayout
-            Margin="30">
+            Margin="20">
 
-            <StackLayout>
-                <Label Text="Last Order" HorizontalTextAlignment="Center"
+            <StackLayout
+                Padding="10,5,10,5">
+
+                <Label Text="Last Order"
+                       HorizontalTextAlignment="Center"
+                       FontSize="25"
+                       FontAttributes="Bold"
+                       TextColor="Black"
                        Margin="10" />
             </StackLayout>
 
             <Border
-                WidthRequest="400"
-                HeightRequest="200"
-                Stroke="Blue"
+                WidthRequest="340"
+                HeightRequest="340"
+                Stroke="Black"
                 StrokeThickness="2"
-                BackgroundColor="Grey"
+                BackgroundColor="#FFD100"
                 StrokeShape="RoundRectangle 20">
 
-                <StackLayout>
-                    <Image Source="{Binding LastOrderImage}"
-                           HeightRequest="100"
-                           WidthRequest="200" />
-                    <Label Text="{Binding LastOrderName}" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding LastOrderDescription}" HorizontalTextAlignment="Center" />
+                <StackLayout 
+                    Padding="20"
+                    Margin="10">
+                    
+                    <Border Stroke="#FFD100"
+                            HeightRequest="180"
+                            WidthRequest="180"
+                            StrokeThickness="2"
+                            StrokeShape="RoundRectangle 20">
+                        <Image Source="{Binding LastOrderImage}"
+                               HeightRequest="200"
+                               WidthRequest="200" />
+                    </Border>
+                    <Label Text="{Binding LastOrderName}"
+                           Margin="10"
+                           TextColor="DarkRed"
+                           FontSize="25"
+                           FontAttributes="Bold"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="{Binding LastOrderDescription}"
+                           TextColor="Black"
+                           FontAttributes="Italic"
+                           VerticalTextAlignment="End"
+                           FontSize="18"
+                           HorizontalTextAlignment="Center" />
                 </StackLayout>
 
             </Border>

@@ -13,12 +13,13 @@
         <viewModels:MainMenuTabbedPageViewModel />
     </ContentPage.BindingContext>
     <StackLayout>
-        <Label Text="Welcome to Myrsini's Delivery Food App"
+        <Label Text="Welcome to Myrsini's Delivery Food Service"
                Margin="5,5,5,  5"
                HorizontalTextAlignment="Center"
                FontSize="25"
-               TextColor="Black"
-               FontFamily="Bold" />
+               FontAttributes="Bold"
+               TextColor="DarkRed"
+               FontFamily="" />
 
         <CollectionView Margin="10 ,10"
                         HorizontalOptions="FillAndExpand"
@@ -37,7 +38,7 @@
                             StrokeThickness="2"
                             StrokeShape="RoundRectangle 20">
 
-                        <Grid Padding="10"
+                        <Grid Padding="5"
                               BackgroundColor="#FFD100">
 
                             <Grid.RowDefinitions>
@@ -47,40 +48,55 @@
 
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="100" />
-                                <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="170" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
 
                             <Border
                                 StrokeThickness="2"
+                                Stroke="#FFD100"
+                                Margin="5"
                                 StrokeShape="RoundRectangle 20" Grid.Column="0" Grid.Row="0">
 
                                 <Image Source="{Binding Image}"
-                                       HeightRequest="80"
+                                       HeightRequest="90"
+                                       WidthRequest="90"
                                        Aspect="Fill" />
                             </Border>
 
-                            <VerticalStackLayout Grid.Column="1" Grid.Row="0" Padding="5" Margin="5">
-                                <Label Text="{Binding Name}" FontAttributes="Bold" TextColor="Brown" />
-                                <Label Text="{Binding Description}" FontAttributes="Italic" />
+                            <VerticalStackLayout Grid.Column="1" Grid.Row="0" Padding="5" Margin="10">
+                                <Label Text="{Binding Name}" 
+                                       FontSize="18"
+                                       FontAttributes="Bold"
+                                       VerticalTextAlignment="Start"
+                                       TextColor="DarkRed" />
+                                <Label Text="{Binding Description}" 
+                                       TextColor="Black" 
+                                       VerticalTextAlignment="Center"
+                                       FontAttributes="Italic" />
                             </VerticalStackLayout>
 
                             <controls:CustomButton
-                                HeightRequest="50"
+                                HeightRequest="80"
+                                WidthRequest="80"
                                 Title="{Binding Path=OrderButtonLabel}"
                                 TappedCommand="{Binding ButtonTappedCommand}"
                                 IsVisible="{Binding OrderButtonVisibility}"
                                 Grid.Column="2" Grid.Row="0" />
 
                             <controls:CustomButton
-                                BackgroundColor="Red"
+                                BackgroundColor="OrangeRed"
+                                WidthRequest="80"
+                                HeightRequest="80"
                                 Title="{Binding Path=CancelButtonLabel}"
                                 TappedCommand="{Binding CancelButtonCommand}"
                                 IsVisible="{Binding CancelButtonVisibility}"
                                 Grid.Column="2" Grid.Row="0" />
 
                             <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
+                                   VerticalTextAlignment="End"
                                    Text="{Binding ProcessLabelText}"
+                                   TextColor="Black"
                                    IsVisible="{Binding ProcessLabelVisibility}" />
 
                         </Grid>

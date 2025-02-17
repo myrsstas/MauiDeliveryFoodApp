@@ -15,6 +15,8 @@
 
     <Label
         Text="{Binding Title, Source={x:Reference RootButton}}"
+        Padding="5"
+        TextColor="Black"
         HorizontalOptions="Fill"
         VerticalOptions="Fill"
         HorizontalTextAlignment="Center"
