@@ -15,4 +15,5 @@ public class FoodLoadService
         using Stream stream = asm.GetManifestResourceStream(_jsonFilePath);
         return JsonSerializer.Deserialize<ObservableCollection<FoodModel>>(stream);
     }
+    
 }

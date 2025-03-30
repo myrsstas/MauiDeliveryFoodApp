@@ -36,7 +36,7 @@ public class MealPreparationService
                     ctsToken.ThrowIfCancellationRequested();
                 }
 
-                Thread.Sleep(1000);
+                Task.Delay(1000);
             }
         }, ctsToken);
     }
